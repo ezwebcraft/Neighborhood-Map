@@ -25,6 +25,7 @@ var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 url += '?' + $.param({
   'api-key': "ab8ef0adc1f04b4cafdb7a131d2c34d1"
 });
+
 $.ajax({
   url: url,
   method: 'GET',
