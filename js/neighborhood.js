@@ -1,12 +1,32 @@
+
+// initialize the first data that uis required
 var map;
+
+var NewYokCity = {
+  lat: 40.7127837,
+  lng: -74.0059413
+};
+
+var model_markers = [
+
+{
+  title: "Manhatten",
+  descriton:"Among the world’s major commercial, financial and cultural centers, it’s the heart of “the Big Apple.”",
+  lat: 40.689861,
+  lng: -74.045635,
+  address:"new york city",
+  url: "http://www.timessquarenyc.org/index.aspx",
+  id: "loc0",
+  visible: ko.observable(true),
+  boolCheck: true
+}
+
+];
+
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-
-    center: {
-      lat: 40.7127837,
-      lng: -74.0059413
-    },
+    center: NewYokCity,
     zoom: 11
   });
 }
@@ -53,16 +73,16 @@ function initMap() {
 
 // from the nytimes api doc
 // Built by LucyBot. www.lucybot.com
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
-  'api-key': "ab8ef0adc1f04b4cafdb7a131d2c34d1"
-});
-
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
-  throw err;
-});
+// var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+// url += '?' + $.param({
+//   'api-key': "ab8ef0adc1f04b4cafdb7a131d2c34d1"
+// });
+//
+// $.ajax({
+//   url: url,
+//   method: 'GET',
+// }).done(function(result) {
+//   console.log(result);
+// }).fail(function(err) {
+//   throw err;
+// });
