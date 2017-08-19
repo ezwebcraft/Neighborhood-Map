@@ -1,20 +1,33 @@
+var map;
 
-var zip_code = '10312';
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
 
-// adding google api key for ajaxcall
+    center: {
+      lat: 40.7127837,
+      lng: -74.0059413
+    },
+    zoom: 11
+  });
+}
 
-var url = "https://maps.googleapis.com/maps/api/place/textsearch/json";
 
-url += '?query=' + zip_code + "&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok";
-
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
-  throw err;
-});
+// var zip_code = '10312';
+//
+// // adding google api key for ajaxcall
+//
+// var url = "https://maps.googleapis.com/maps/api/place/textsearch/json";
+//
+// url += '?query=' + zip_code + "&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok";
+//
+// $.ajax({
+//   url: url,
+//   method: 'GET',
+// }).done(function(result) {
+//   console.log(result);
+// }).fail(function(err) {
+//   throw err;
+// });
 
 
 // var nytimesUrl = ' '+ theCity +'';

@@ -1,9 +1,25 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
+
+
+/* to specify all <div> elements should have padding and border included in
+the element's total width and height*/
+
+* {
+  box-sizing: border-box;
+}
+
+*:visited {
+  color: #23f900;
+}
+
 #map {
   height: 100%;
 }
+
+
 /* Optional: Makes the sample page fill the window. */
+
 html, body {
   height: 100%;
   margin: 0;
