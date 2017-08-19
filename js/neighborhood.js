@@ -1,6 +1,7 @@
 
 // initialize the first data that uis required
 var map;
+var marker;
 
 var NewYokCity = {
   lat: 40.7127837,
@@ -23,13 +24,39 @@ var model_markers = [
 
 ];
 
-
 function initMap() {
+
   map = new google.maps.Map(document.getElementById('map'), {
     center: NewYokCity,
     zoom: 11
   });
+
+setMarkers(model_markers);
+//   marker = new google.maps.Marker({
+//    position: NewYokCity,
+//    map: map,
+//    title: "Test"
+// });
+
 }
+
+function setMarkers(markers) {
+  for(i=0; i<markers.length; i++) {
+
+// create a marker for each data
+    markers[i].holdMarker = new google.maps.Marker({
+      position: new google.maps.LatLng(markers[i].lat, markers[i].lng),
+      map: map,
+      title: markers[i].title,
+    });
+
+  }
+}
+
+// window.onload = initMap();
+
+// var marker = new google.maps.Marker(model_markers[0];
+//Initialize the map and its contents
 
 
 // var zip_code = '10312';
