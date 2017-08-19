@@ -1,13 +1,11 @@
 
-var zip_code = '10312'
+var zip_code = '10312';
 
 // adding google api key for ajaxcall
 
 var url = "https://maps.googleapis.com/maps/api/place/textsearch/json";
 
-url += '?query='+ zip_code + $.param({
-  'api-key': "ab8ef0adc1f04b4cafdb7a131d2c34d1"
-});
+url += '?query=' + zip_code + "&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok";
 
 $.ajax({
   url: url,

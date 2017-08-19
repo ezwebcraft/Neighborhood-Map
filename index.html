@@ -6,11 +6,11 @@
   <title>Neighborhood Map</title>
   <meta name="description" content="DESCRIPTION">
   <link rel="stylesheet" href="PATH">
-<!-- Google API Key: AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok -->
-<!-- meet up api key 387321241c321364c2a66745fd81f -->
-<!-- https://maps.googleapis.com/maps/api/place/textsearch/json?query=movies+in+nyc&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/master.css">
+  <!-- Google API Key: AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok -->
+  <!-- meet up api key 387321241c321364c2a66745fd81f -->
+  <!-- https://maps.googleapis.com/maps/api/place/textsearch/json?query=movies+in+nyc&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="./css/neighborhood.css">
 
   <!--[if lt IE 9]>
       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,29 +19,35 @@
 
 <body>
   <form id="search-form" data-bind="submit: search">
-      <input id="search-input" data-bind="value: query" placeholder="Search..." autofocus />
-      <button id="search-btn" type="submit">
+    <input id="search-input" data-bind="value: query" placeholder="Search..." autofocus />
+    <button id="search-btn" type="submit">
         <span class="glyphicon glyphicon-search"></span>
       </button>
-      <p id="search-summary">
-        <span></span>
-      </p>
-    </form>
+    <p id="search-summary">
+      <span></span>
+    </p>
+  </form>
   <div id="map"></div>
-      <script>
-        var map;
-        function initMap() {
-          map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
-          });
-        }
-      </script>
+  <script>
+    var map;
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok&callback=initMap"
-    async defer></script>
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        // center: {lat: -34.397, lng: 150.644},
+        center: {
+          lat: 40.5462358,
+          lng: -74.2562739
+        },
+        zoom: 11
+      });
+    }
+  </script>
+
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script> -->
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok&callback=initMap" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="./js/neighborhood.js"></script>
 </body>
 
 </html>
