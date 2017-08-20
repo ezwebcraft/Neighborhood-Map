@@ -17,11 +17,37 @@ the element's total width and height*/
   height: 100%;
 }
 
-
 /* Optional: Makes the sample page fill the window. */
 
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+#input {
+    margin: 15px 0 5px 20px;
+    width: 75%;
+    height: 34px;
+    font-size: 16px;
+    font-family: helvetica, sans-serif;
+    color: #00e755;
+    border: none;
+    -webkit-box-shadow: 2px 2px 5px #737373;
+    outline: none;
+}
+
+
+#search-box {
+    top: 50%;
+    position: absolute;
+    z-index: 3;
+}
+
+#search-nav {
+    width: 120%;
+    max-height: 549px;
+    background-color: #d9d9d9;
+    border: solid 2px #737373;
+    overflow: hidden;
 }

@@ -12,12 +12,11 @@ var model_markers = [
   {
     title: "Manhatten",
     descriton: "Among the world’s major commercial, financial and cultural centers, it’s the heart of “the Big Apple.”",
-    lat: 40.689861,
-    lng: -74.045635,
+    lat: 40.7830603,
+    lng: -73.9712488,
     address: "new york city",
     url: "https://www.nycgo.com/boroughs-neighborhoods/manhattan",
     id: "loc0",
-    // pic: ko.observable("http://wikitravel.org/en/File:Manhattan_from_top_of_the_rock.JPG"),
     visible: ko.observable(true),
     boolCheck: true
   },
@@ -29,7 +28,6 @@ var model_markers = [
     address: "Manhattan, NY 10036",
     url: "http://www.timessquarenyc.org/index.aspx",
     id: "loc1",
-    // pic:https:"maps.googleapis.com/maps/api/streetview?size=600x300&location=46.414382"+ +","+"+10.013988&heading=151.78&pitch=-0.76&key=",
     visible: ko.observable(true),
     boolCheck: true
   }
@@ -54,11 +52,6 @@ function setMarkers(markers) {
       position: new google.maps.LatLng(markers[i].lat, markers[i].lng),
       map: map,
       title: markers[i].title,
-      shape: {
-        coords: [1, 25, -40, -25, 1],
-        type: 'poly'
-      }
-
 
     });
 
@@ -70,7 +63,7 @@ function setMarkers(markers) {
       markers[i].title +
       " '><br><hr style='margin-bottom: 2px'><strong>About<br><br> " +
       markers[i].descriton +
-      " <a class='web-links' href='http://" +
+      " <a class='web-links' href='" +
       markers[i].url +
       "'><br><br>" +
       markers[i].title +

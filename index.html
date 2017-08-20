@@ -19,25 +19,33 @@
 </head>
 
 <body>
-  <div id="search-container">
-    <form id="search-form" data-bind="submit: search">
-      <input id="search-input" data-bind="value: query" placeholder="Search Space" autofocus />
-      <button id="search-btn" type="submit">
-          <span class="glyphicon glyphicon-search"></span>
-        </button>
-      <p id="search-summary">
-        <span></span>
-      </p>
-    </form>
+<div id="search-box">
+  <div id="search-nav">
+    <input id="input" placeholder="Search…" type="input" data-bind="" autocomplete="off"></input>
+    <div id="">
+      <ul data-bind="">
+      </ul>
+      <div data-bind="">
+        <a href="#" data-bind="">
+          <li>
+            <strong data-bind=""></strong>
+            <p data-bind=""></p>
+            <p data-bind=""></p>
+          </li>
+        </a>
+      </div>
+    </div>
   </div>
+</div>
+
 
   <div id="map"></div>
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok&callback=initMap" async defer></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="./js/neighborhood.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDZn0VpcoL0RV2ywc0vMm86yEcfJ6-WOok&callback=initMap" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./js/neighborhood.js"></script>
 </body>
 
 </html>
